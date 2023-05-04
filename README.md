@@ -1,5 +1,7 @@
 # puzzle
 
+My netlify link is not picking my entire repository. It is just picking static folder.
+
 This puzzle currently has 5 clues which are based on ciphers,links,suduko and many more interesting things.It,s all about cheching your wits, problem solving skills and creativity.
 
 
