@@ -75,10 +75,11 @@
 		        
 		        
 		        const totalSeconds = Math.floor(difference/1000);
-                const hours = Math.floor(totalSeconds / 60*60);
 		        const minutes = Math.floor(totalSeconds / 60);
+			const hours = Math.floor(minutes /60);
+			const mins=minutes%60;
 		        const seconds = totalSeconds % 60;
-		        document.querySelector("#timer").innerText = hours+'+'+ minutes + ':' + ((seconds < 10) ? '0' + seconds : seconds);
+		        document.querySelector("#timer").innerText = hours+':'+ mins + ':' + ((seconds < 10) ? '0' + seconds : seconds);
 		        
 		        if(totalSeconds <= 0) {
 		            clearInterval(timerID);
