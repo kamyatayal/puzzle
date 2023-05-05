@@ -58,37 +58,33 @@
 
         </div>
         
-        <div id="countdown"></div>
+        <div id="timer"></div>
             <script>
-    
-            function countdown( elementName, minutes, seconds )
-{
-                var element, endTime, hours, mins, msLeft, time;
-                function twoDigits( n )
-                {
-                    return (n <= 9 ? "0" + n : n);
-                }
-                function updateTimer()
-                {
-                    msLeft = endTime - (+new Date);
-                     
-                    if ( msLeft < 1000 ) {
-                        
-                        element.innerHTML = "countdown's over!";
-                    } else {
-                        time = new Date( msLeft );
-                        hours = time.getUTCHours();
-                        mins = time.getUTCMinutes();
-                        element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-                        setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-                    }
-                }
-                 
-                element = document.getElementById( elementName );
-                endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-                updateTimer();
-            }
-            countdown( "countdown", 120, 0 );
+    const timerValue =7200;
+		    
+		    let time = localStorage.getItem('saved_timer');
+		    if(time == null) {
+		        const saved_timer = new Date().getTime() + (timerValue * 1000);
+		        localStorage.setItem('saved_timer', saved_timer);
+		        time = saved_timer;
+		    }
+		    
+		    const timerID = setInterval(() => {
+		        const now = new Date().getTime();
+		        const difference = time - now;
+		        
+		        
+		        const totalSeconds = Math.floor(difference/1000);
+                const hours = Math.floor(totalSeconds / 60*60);
+		        const minutes = Math.floor(totalSeconds / 60);
+		        const seconds = totalSeconds % 60;
+		        document.querySelector("#timer").innerText = hours+'+'+ minutes + ':' + ((seconds < 10) ? '0' + seconds : seconds);
+		        
+		        if(totalSeconds <= 0) {
+		            clearInterval(timerID);
+		            localStorage.removeItem('saved_timer');
+		        }
+		    }, 1000);
         
             </script>
         
