@@ -1,6 +1,6 @@
 # puzzle
 
-My netlify link is not picking my entire repository. It is just picking static folder.
+My website can't be deployed as it has backend which is not compatible on netlify and github.io ,also heroku is paid now.
 
 This puzzle currently has 5 clues which are based on ciphers,links,suduko and many more interesting things.It,s all about cheching your wits, problem solving skills and creativity.
 
