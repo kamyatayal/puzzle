@@ -28,7 +28,7 @@ function reqListener1() {
     lblName.innerHTML=score;
     document.getElementById("question4").value="done";
     }
-    else if(document.getElementById("question5").value == "{9}")
+    else if(document.getElementById("question5").value == "{10}")
     {
     score=score+80;
     var lblName = document.getElementById("score");
