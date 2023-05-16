@@ -28,7 +28,7 @@ function reqListener1() {
     lblName.innerHTML=score;
     document.getElementById("question4").value="done";
     }
-    else if(document.getElementById("question5").value == "{Never gonna give up}")
+    else if(document.getElementById("question5").value == "{9}")
     {
     score=score+80;
     var lblName = document.getElementById("score");
@@ -54,7 +54,7 @@ function myFunction1() {
   window.open("https://drive.google.com/file/d/10Wxo3v6IL5dRkh7rAMJzfFDtVZ1QHHSl/view?usp=share_link","_blank");
 }
 function myFunction2() {
-  window.open("https://drive.google.com/file/d/1SoUHxtFUsimMJFPvMIx70bAiKbjLBDJL/view?usp=share_link","_blank");
+  window.open("https://drive.google.com/file/d/11oJqcveoiyQVWlG2VuQ8XjFbY6Q_U6w0/view?usp=share_link","_blank");
 }
 // function myFunction1() {
 //   window.location.href="question3.html";  
